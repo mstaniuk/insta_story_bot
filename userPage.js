@@ -18,7 +18,8 @@ const getReelDataFromResponse = async (response) => {
 
   try {
     const responseBody = await response.json();
-
+//	console.log(_.get(responseBody,pathToLatestReel));
+//	console.log(_.get(responseBody,pathToSeenReel));
     return {
       latest: _.get(responseBody, pathToLatestReel),
       seen: _.get(responseBody, pathToSeenReel),
@@ -109,7 +110,7 @@ const userPage = async (page, username, config) => {
 
     const reelData = await getReelDataFromResponse(response);
 
-    if (reelData != null && reelData.latest !== reelData.seen) { // There is unseen media
+    if (reelData != null && reelData.latest !== null && reelData.latest !== reelData.seen) { // There is unseen media
       await watchReel(page, username, config);
     }
 

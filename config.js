@@ -1,11 +1,11 @@
-function getConfig(argv) {
+function getConfig(env) {
   return {
-    users: argv._,
-    username: argv.u,
-    password: argv.p,
+    users: env.USERS,
+    username: env.USERNAME,
+    password: env.PASSWORD,
     downloadDir: './media',
     browserSettings: {
-      // headless: false,
+      headless: false,
     },
   };
 }
