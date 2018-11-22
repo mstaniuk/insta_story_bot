@@ -5,7 +5,7 @@ function getConfig(env) {
     password: env.PASSWORD,
     downloadDir: './media',
     browserSettings: {
-      headless: false,
+      // headless: false,
     },
   };
 }
