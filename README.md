@@ -1,8 +1,8 @@
-#Bot * beep * * boop  *
+# Bot * beep * * boop  *
 
 Logs into instagram and ooks at teh insta stories of given users - saves them into ./media directory
 
-##installation
+## installation
 * _you have to have nodejs installed_
 * npm i
 * copy .env.example
