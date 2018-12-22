@@ -22,7 +22,7 @@ const download = (url, destination) => new Promise((resolve, reject) => {
 
 const getFilenameFromUrl = (url) => {
   const mediaUrl = url.split('/');
-  return mediaUrl[mediaUrl.length - 1];
+  return mediaUrl[mediaUrl.length - 1].split("?").shift();
 };
 
 module.exports = {
