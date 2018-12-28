@@ -114,7 +114,7 @@ const userPage = async (page, username, config) => {
       await watchReel(page, username, config);
     }
 
-    await page.waitFor(30000);
+    await page.waitFor(120000);
 
   } catch (e) {
     console.log(`User page for: '${username}' - Error while processing pages response and reel`);
